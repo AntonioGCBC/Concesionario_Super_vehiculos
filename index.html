@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="esp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Filtro</title>
+</head>
+<body>
+    <main>
+        <div class="header">
+            <img src="Fotos/logoescrito.PNG" alt="logoescrito" class="logoescrito">
+            <img src="Fotos/logo.PNG" alt="logotipo" class="logo">
+        </div>
+
+        <div class="catalogo">
+            <!-- Barra de búsqueda -->
+            <div class="search-container">
+                <input type="text" placeholder="Busca tu vehículo" id="search-input">
+            </div>
+
+            <div class="botones">
+                <!-- Botones de filtro -->
+                <button class="filtro-btn" onclick="filtrar('A')">A</button> <!--oneclik es el atributo de HTML para poder ejecutar el js al hacerse click sobre el elemento HTML-->
+                <button class="filtro-btn" onclick="filtrar('B')">B</button>
+                <button class="filtro-btn" onclick="filtrar('C')">C</button>
+                <button class="filtro-btn" onclick="filtrar('D')">D</button>
+                <button class="filtro-btn" onclick="filtrar('E')">E</button>
+                <button class="filtro-btn" onclick="filtrar('F')">F</button>
+                <button class="filtro-btn" onclick="filtrar('G')">G</button>
+                <button class="filtro-btn" onclick="filtrar('H')">H</button>
+                <button class="filtro-btn" onclick="filtrar('I')">I</button>
+                <button class="filtro-btn" onclick="filtrar('J')">J</button>
+                <button class="filtro-btn" onclick="filtrar('K')">K</button>
+                <button class="filtro-btn" onclick="filtrar('L')">L</button>
+                <button class="filtro-btn" onclick="filtrar('M')">M</button>
+                <button class="filtro-btn" onclick="filtrar('N')">N</button>
+                <button class="filtro-btn" onclick="filtrar('P')">P</button>
+                <button class="filtro-btn" onclick="filtrar('R')">R</button>
+                <button class="filtro-btn" onclick="filtrar('S')">S</button>
+                <button class="filtro-btn" onclick="filtrar('T')">T</button>
+                <button class="filtro-btn" onclick="filtrar('V')">V</button>
+                <button class="filtro-btn" onclick="filtrar('Y')">Y</button>
+                <button class="filtro-btn" onclick="mostrarTodos()">Todos</button>
+                <button class="filtro-btn" onclick="filtrarPorTipo('coche')">Coches</button>
+                <button class="filtro-btn" onclick="filtrarPorTipo('moto')">Motos</button>
+            </div>
+
+
+            <!-- Lista de vehículos -->
+             <ul class="lista" id="listadovehiculos">
+                <li class="vehiculo" data-marca="B" data-tipo="coche">
+                    <h1>BMW M3 E36</h1>
+                    <div class="productos">
+                        <a name="" href="reserva.html">
+                            <img src="Fotos/bmw-m3-coupe-e30-subasta-1582304489.jpg" alt="" class="vehiculos">
+                        </a>    
+                            <table>
+                                <tr>
+                                    <th>CV</th>
+                                    <th>Precio</th>
+                                    <th>Kilómetros</th>
+                                    <th>Consumo (cada 100km)</th>
+                                </tr>
+                                <tr>
+                                    <td>280CV</td>
+                                    <td>22.500€</td>
+                                    <td>145.000</td>
+                                    <td>9,8L</td>
+                                </tr>
+                            </table>
+                    </div>
+                </li>
+                <li class="vehiculo" data-marca="F" data-tipo="coche">
+                    <h1>Ford Mustang 1969</h1>
+                    <div class="productos">
+                        <a name="" href="reserva.html">
+                            <img src="Fotos/mustang1969.jpg" alt="" class="vehiculos">
+                        </a>
+                            <table>
+                                <tr>
+                                    <th>CV</th>
+                                    <th>Precio</th>
+                                    <th>Kilómetros</th>
+                                    <th>Consumo (cada 100km)</th>
+                                </tr>
+                                <tr>
+                                    <td>300CV</td>
+                                    <td>25.000€</td>
+                                    <td>130.000</td>
+                                    <td>15,5L</td>
+                                </tr>
+                            </table>
+                        </div>
+                </li>
+                <li class="vehiculo" data-marca="C" data-tipo="coche">
+                    <h1>Chevrolet Impala 1964</h1>
+                    <div class="productos">
+                        <a name="" href="reserva.html">    
+                            <img src="Fotos/impala.jpg" alt="" class="vehiculos">
+                        </a>    
+                            <table>
+                                <tr>
+                                    <th>CV</th>
+                                    <th>Precio</th>
+                                    <th>Kilómetros</th>
+                                    <th>Consumo (cada 100km)</th>
+                                </tr>
+                                <tr>
+                                    <td>240CV</td>
+                                    <td>19.800€</td>
+                                    <td>138.500</td>
+                                    <td>14,3L</td>
+                                </tr>
+                            </table>
+                        </div>
+                </li>
+                <li class="vehiculo" data-marca="M" data-tipo="coche">
+                    <h1>Mercedes 190E</h1>
+                    <div class="productos">
+                        <a name="" href="reserva.html">
+                            <img src="Fotos/mercedes-benz-190-e-2.5-16-evolution-ii.jpg" alt="" class="vehiculos">
+                        </a>
+                        <table>
+                            <tr>
+                                <th>CV</th>
+                                <th>Precio</th>
+                                <th>Kilómetros</th>
+                                <th>Consumo (cada 100km)</th>
+                            </tr>
+                            <tr>
+                                <td>180CV</td>
+                                <td>21.000€</td>
+                                <td>142.000</td>
+                                <td>11,5L</td>
+                            </tr>
+                        </table>
+                    </div>
+                </li>
+                <li class="vehiculo" data-marca="D" data-tipo="moto">
+                    <h1>Ducati Superleggera V4</h1>
+                    <div class="productos">
+                        <a name="" href="reserva.html">
+                            <img src="Fotos/Ducati-superleggera-v4-2020-prueba-precio-ficha-y-primeras-impresiones.jpg" alt="" class="vehiculos">
+                        </a>
+                            <table>
+                            <tr>
+                                <th>CV</th>
+                                <th>Precio</th>
+                                <th>Kilómetros</th>
+                                <th>Consumo (cada 100km)</th>
+                            </tr>
+                            <tr>
+                                <td>234CV</td>
+                                <td>28.500€</td>
+                                <td>45.200</td>
+                                <td>8,0L</td>
+                            </tr>
+                        </table>
+                    </div>
+                </li>
+                <li class="vehiculo" data-marca="B" data-tipo="moto">
+                    <h1>Bmw sr1000rr</h1>
+                    <div class="productos">
+                        <a name="" href="reserva.html">
+                            <img src="Fotos/bmw-s1000rr-2023-estatica-18.jpeg" alt="" class="vehiculos" data-marca="BMW">
+                        </a>    
+                        <table>
+                            <tr>
+                                <th>CV</th>
+                                <th>Precio</th>
+                                <th>Kilómetros</th>
+                                <th>Consumo (cada 100km)</th>
+                            </tr>
+                            <tr>
+                                <td>207CV</td>
+                                <td>17.800€</td>
+                                <td>62.300</td>
+                                <td>6,5L</td>
+                            </tr>
+                        </table>
+                    </div>
+                </li>
+                <li class="vehiculo" data-marca="M" data-tipo="coche">
+                    <h1>Mazda RX 7</h1>
+                    <div class="productos">
+                        <a name="" href="reserva.html">
+                            <img src="Fotos/rx7.PNG" alt="" class="vehiculos">
+                        </a>
+                        <table>
+                            <tr>
+                                <th>CV</th>
+                                <th>Precio</th>
+                                <th>Kilómetros</th>
+                                <th>Consumo (cada 100km)</th>
+                            </tr>
+                            <tr>
+                                <td>250CV</td>
+                                <td>23.500€</td>
+                                <td>75.000</td>
+                                <td>13,0L</td>
+                            </tr>
+                        </table>
+                    </div>
+                </li>
+                <li class="vehiculo" data-marca="N" data-tipo="coche">
+                    <h1>Nissan Silvia s15</h1>
+                    <div class="productos">
+                        <a name="" href="reserva.html">
+                            <img src="Fotos/silvia s15.PNG" alt="" class="vehiculos">
+                        </a>    
+                        <table>
+                            <tr>
+                                <th>CV</th>
+                                <th>Precio</th>
+                                <th>Kilómetros</th>
+                                <th>Consumo (cada 100km)</th>
+                            </tr>
+                            <tr>
+                                <td>220CV</td>
+                                <td>20.000€</td>
+                                <td>58.000</td>
+                                <td>10,5L</td>
+                            </tr>
+                        </table>
+                    </div>
+                </li>
+                <li class="vehiculo" data-marca="F" data-tipo="coche">
+                    <h1>Ferrari 812 Gts</h1>
+                    <div class="productos">
+                        <a name="" href="reserva.html">
+                            <img src="Fotos/ferrari 812 gts.PNG" alt="" class="vehiculos">
+                        </a>
+                        <table>
+                            <tr>
+                                <th>CV</th>
+                                <th>Precio</th>
+                                <th>Kilómetros</th>
+                                <th>Consumo (cada 100km)</th>
+                            </tr>
+                            <tr>
+                                <td>800CV</td>
+                                <td>300.000€</td>
+                                <td>20.000</td>
+                                <td>19,0L</td>
+                            </tr>
+                        </table>
+                    </div>
+                </li>
+                <li class="vehiculo" data-marca="L" data-tipo="coche">
+                    <h1>Lamborghini Huracan Performante</h1>
+                    <div class="productos">
+                        <a name="" href="reserva.html">
+                            <img src="Fotos/huracan.jpg" alt="" class="vehiculos">
+                        </a>
+                        <table>
+                            <tr>
+                                <th>CV</th>
+                                <th>Precio</th>
+                                <th>Kilómetros</th>
+                                <th>Consumo (cada 100km)</th>
+                            </tr>
+                            <tr>
+                                <td>640CV</td>
+                                <td>280.000€</td>
+                                <td>25.000</td>
+                                <td>16,5L</td>
+                            </tr>
+                        </table>
+                    </div>
+                </li>
+                <li class="vehiculo" data-marca="P" data-tipo="coche">
+                    <h1>Porsche Carrera 911</h1>
+                    <div class="productos">
+                        <a name="" href="reserva.html">
+                            <img src="Fotos/Porsche_911.jpg" alt="" class="vehiculos">
+                        </a>    
+                        <table>
+                            <tr>
+                                <th>CV</th>
+                                <th>Precio</th>
+                                <th>Kilómetros</th>
+                                <th>Consumo (cada 100km)</th>
+                            </tr>
+                            <tr>
+                                <td>450CV</td>
+                                <td>130.000€</td>
+                                <td>35.000</td>
+                                <td>12,8L</td>
+                            </tr>
+                        </table>
+                    </div>
+                </li>
+                <li class="vehiculo" data-marca="R" data-tipo="coche">
+                    <h1>Rolls Royce Spectre</h1>
+                    <div class="productos">
+                        <a name="" href="reserva.html">
+                            <img src="Fotos/rollroyce.jpg" alt="" class="vehiculos">
+                        </a>    
+                        <table>
+                            <tr>
+                                <th>CV</th>
+                                <th>Precio</th>
+                                <th>Kilómetros</th>
+                                <th>Consumo (cada 100km)</th>
+                            </tr>
+                            <tr>
+                                <td>563CV</td>
+                                <td>500.000€</td>
+                                <td>15.000</td>
+                                <td>25,0L</td>
+                            </tr>
+                        </table>
+                    </div>
+                </li>
+                <li class="vehiculo" data-marca="Y" data-tipo="moto">
+                    <h1>Yamaha YZF R1</h1>
+                    <div class="productos">
+                        <a name="" href="reserva.html">
+                            <img src="Fotos/2024-Yamaha-YZF1000R1-EU-Icon_Blue-Static-0499-01.jpg" alt="" class="vehiculos">
+                        </a>
+                        <table>
+                            <tr>
+                                <th>CV</th>
+                                <th>Precio</th>
+                                <th>Kilómetros</th>
+                                <th>Consumo (cada 100km)</th>
+                            </tr>
+                            <tr>
+                                <td>200CV</td>
+                                <td>18.000€</td>
+                                <td>30.000</td>
+                                <td>6,2L</td>
+                            </tr>
+                        </table>
+                    </div>
+                </li>
+                <li class="vehiculo" data-marca="H" data-tipo="moto">
+                    <h1>Honda Cbr 1000rr</h1>
+                    <div class="productos">
+                        <a name="" href="reserva.html">
+                            <img src="Fotos/HondaCBR1000RR-R-2024-SP-1.jpg" alt="" class="vehiculos">
+                        </a>
+                        <table>
+                            <tr>
+                                <th>CV</th>
+                                <th>Precio</th>
+                                <th>Kilómetros</th>
+                                <th>Consumo (cada 100km)</th>
+                            </tr>
+                            <tr>
+                                <td>190CV</td>
+                                <td>17.500€</td>
+                                <td>50.000</td>
+                                <td>6,5L</td>
+                            </tr>
+                        </table>
+                    </div>
+                </li>
+                <li class="vehiculo" data-marca="A" data-tipo="moto">
+                    <h1>Aprilia RSV4</h1>
+                    <div class="productos">
+                        <a name="" href="reserva.html">
+                            <img src="Fotos/rsv4.jpeg" alt="" class="vehiculos">
+                        </a>
+                        <table>
+                            <tr>
+                                <th>CV</th>
+                                <th>Precio</th>
+                                <th>Kilómetros</th>
+                                <th>Consumo (cada 100km)</th>
+                            </tr>
+                            <tr>
+                                <td>201CV</td>
+                                <td>20.200€</td>
+                                <td>48.000</td>
+                                <td>7,0L</td>
+                            </tr>
+                        </table>
+                    </div>
+                </li>
+                <li class="vehiculo" data-marca="K" data-tipo="moto">
+                    <h1>KTM Rc 890</h1>
+                    <div class="productos">
+                        <a name="" href="reserva.html">
+                            <img src="Fotos/KTM-RC8R-2022-2_compressed.jpg" alt="" class="vehiculos">
+                        </a>
+                        <table>
+                            <tr>
+                                <th>CV</th>
+                                <th>Precio</th>
+                                <th>Kilómetros</th>
+                                <th>Consumo (cada 100km)</th>
+                            </tr>
+                            <tr>
+                                <td>125CV</td>
+                                <td>12.500€</td>
+                                <td>32.000</td>
+                                <td>5,2L</td>
+                            </tr>
+                        </table>
+                    </div>
+                </li>
+                <li class="vehiculo" data-marca="M" data-tipo="coche">
+                    <h1>Mercedes SLS AMG</h1>
+                    <div class="productos">
+                        <a name="" href="reserva.html">
+                            <img src="Fotos/sls amg.jpg" alt="" class="vehiculos">
+                        </a>
+                        <table>
+                            <tr>
+                                <th>CV</th>
+                                <th>Precio</th>
+                                <th>Kilómetros</th>
+                                <th>Consumo (cada 100km)</th>
+                            </tr>
+                            <tr>
+                                <td>571CV</td>
+                                <td>180.000€</td>
+                                <td>40.000</td>
+                                <td>17,2L</td>
+                            </tr>
+                        </table>
+                    </div>
+                </li>
+                <li class="vehiculo" data-marca="P" data-tipo="coche">
+                    <h1>Porsche GT3 RS</h1>
+                    <div class="productos">
+                        <a name="" href="reserva.html">
+                            <img src="Fotos/gt3 rs.jpeg" alt="" class="vehiculos">
+                        </a>
+                        <table>
+                            <tr>
+                                <th>CV</th>
+                                <th>Precio</th>
+                                <th>Kilómetros</th>
+                                <th>Consumo (cada 100km)</th>
+                            </tr>
+                            <tr>
+                                <td>520CV</td>
+                                <td>190.000€</td>
+                                <td>25.000</td>
+                                <td>15,0L</td>
+                            </tr>
+                        </table>
+                    </div>
+                </li>
+                <li class="vehiculo" data-marca="K" data-tipo="moto">
+                    <h1>Kawasaki H2R</h1>
+                    <div class="productos">
+                        <a name="" href="reserva.html">
+                            <img src="Fotos/h2r.png" alt="" class="vehiculos">
+                        </a>    
+                        <table>
+                            <tr>
+                                <th>CV</th>
+                                <th>Precio</th>
+                                <th>Kilómetros</th>
+                                <th>Consumo (cada 100km)</th>
+                            </tr>
+                            <tr>
+                                <td>310CV</td>
+                                <td>33.000€</td>
+                                <td>15.000</td>
+                                <td>10,0L</td>
+                            </tr>
+                        </table>
+                    </div>
+                </li>
+                <li class="vehiculo" data-marca="A" data-tipo="coche">
+                    <h1>Audi R8 RS</h1>
+                    <div class="productos">
+                        <a name="" href="reserva.html">
+                            <img src="Fotos/r8rs.jpg" alt="" class="vehiculos">
+                        </a>
+                        <table>
+                            <tr>
+                                <th>CV</th>
+                                <th>Precio</th>
+                                <th>Kilómetros</th>
+                                <th>Consumo (cada 100km)</th>
+                            </tr>
+                            <tr>
+                                <td>620CV</td>
+                                <td>220.000€</td>
+                                <td>20.000</td>
+                                <td>13,5L</td>
+                            </tr>
+                        </table>
+                    </div>
+                </li>
+                <li class="vehiculo" data-marca="E" data-tipo="">
+
+                </li>
+                <li class="vehiculo" data-marca="G" data-tipo="">
+
+                </li>
+                <li class="vehiculo" data-marca="I" data-tipo="">
+                    
+                </li>
+                <li class="vehiculo" data-marca="J" data-tipo="">
+
+                </li>
+                <li class="vehiculo" data-marca="S" data-tipo="">
+
+                </li>
+                <li class="vehiculo" data-marca="T" data-tipo="">
+
+                </li>
+                <li class="vehiculo" data-marca="V" data-tipo="">
+
+                </li>
+            </ul>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section contact">
+                <h4>Contacto</h4>
+                <p><strong>Teléfono:</strong> <a href="tel:+1234567890">+1 234 567 890</a></p>
+                <p><strong>Email:</strong> <a href="mailto:info@luxurycars.com">info@geasconcessionary.com</a></p>
+            </div>
+            <div class="footer-section location">
+                <h4>Ubicación</h4>
+                <p>Avenida de la Elegancia, 123<br>
+                Ciudad del Lujo, 45678<br>
+                País de la Opulencia</p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3035.957600130067!2d-3.6537294000000053!3d40.4540754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd422f002683d97b%3A0xa7376fb03730f27f!2sLuxury%20Motor!5e0!3m2!1ses!2ses!4v1716655379881!5m2!1ses!2ses" width="50%" height="150" style="border:0;" allowfullscreen="" loading="lazy" class="maps"></iframe>
+                
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Gea's Concessionary. Todos los derechos reservados.</p>
+        </div>
+    </footer>    
+    
+    <script>
+                // Función para filtrar vehículos por marca
+            // Esta función se encarga de filtrar los vehículos según la inicial proporcionada
+        function filtrar(inicial) {
+            // Selecciona todos los elementos con la clase 'vehiculo' y los guarda en una lista
+            var listaVehiculos = document.querySelectorAll('.vehiculo');
+
+            // Itera sobre cada vehículo en la lista
+            listaVehiculos.forEach(function(vehiculo) {
+                // Verifica si la marca del vehículo comienza con la inicial proporcionada
+                if (vehiculo.dataset.marca.startsWith(inicial)) {
+                    // Si la marca del vehículo coincide con la inicial, lo muestra
+                    vehiculo.style.display = 'block'; // Muestra el vehículo si la marca comienza con la inicial
+                } else {
+                    // Si la marca del vehículo no coincide con la inicial, lo oculta
+                    vehiculo.style.display = 'none'; // Oculta el vehículo si la marca no coincide
+                }
+            });
+        }
+
+        // Esta función se encarga de mostrar todos los vehículos cuando se llama
+        function mostrarTodos() {
+            // Selecciona todos los elementos con la clase 'vehiculo' y los guarda en una lista
+            var listaVehiculos = document.querySelectorAll('.vehiculo'); 
+
+            // Itera sobre cada vehículo en la lista y los muestra
+            listaVehiculos.forEach(function(vehiculo) {
+                vehiculo.style.display = 'block'; // Muestra el vehículo
+            });
+        }
+
+        // -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        function filtrarPorTipo(tipo) {
+            // Selecciona todos los elementos con la clase 'vehiculo' y los guarda en una lista
+            var listaVehiculos = document.querySelectorAll('.vehiculo');
+
+            // Itera sobre cada vehículo en la lista
+            listaVehiculos.forEach(function(vehiculo) {
+                // Verifica si el atributo data-tipo del vehículo coincide con el valor de 'tipo'
+                if (vehiculo.dataset.tipo.startsWith(tipo)) {
+                    // Si es así, muestra el vehículo.
+                    vehiculo.style.display = 'block';
+                } else {
+                    // Si no, oculta el vehículo.
+                    vehiculo.style.display = 'none';
+                }
+            });
+        }
+
+        // -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+        // Función para buscar vehículos
+
+        document.getElementById("search-input").addEventListener("input", function() {
+
+            // Obtiene el valor del campo de búsqueda y lo convierte a minúsculas.
+            // Esto se hace para que la búsqueda no distinga entre mayúsculas y minúsculas.
+            var input = document.getElementById("search-input").value.toLowerCase();
+
+            // Obtiene todos los elementos con la clase "vehiculo".
+            // Estos son los elementos que vamos a filtrar en función del texto de búsqueda.
+            var elementos = document.getElementsByClassName('vehiculo');
+
+            // Recorre todos los elementos con la clase "vehiculo".
+            for (var i = 0; i < elementos.length; i++) {
+
+                // Obtiene el texto del primer elemento <h1> dentro del elemento actual "vehiculo".
+                // Convierte este texto a minúsculas para la comparación.
+                var nombre = elementos[i].getElementsByTagName('h1')[0].textContent.toLowerCase();
+
+                // Comprueba si el nombre del vehículo incluye el texto de búsqueda.
+                // La función includes() devuelve true si el nombre incluye el texto de búsqueda.
+                if (nombre.includes(input)) {
+                    // Si el nombre incluye el texto de búsqueda, muestra el elemento.
+                    elementos[i].style.display = "";
+                } else {
+                    // Si el nombre no incluye el texto de búsqueda, oculta el elemento.
+                    elementos[i].style.display = "none";
+                }
+            }
+            });
+    </script>
+</body>
+</html>

@@ -1,0 +1,163 @@
+/* Cabecera principal */
+.header {
+  background-color: #333333; /* Fondo oscuro para contraste */
+  color: #ffffff; /* Texto blanco para legibilidad */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Sombra sutil para destacar la cabecera */
+  position: relative; /* Fija la cabecera en la parte superior */
+  width: 100%;
+}
+
+
+/* Logo-escrito */
+.header .logoescrito{
+  width: 50%;
+  height: 50%; 
+  margin-right: 5%;
+}
+/* Logo */
+.header .logo{
+  width: 15%;
+  height: 15%; 
+  margin-right: 5%;
+}
+
+body{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background-color: rgba(226, 214, 214, 0.11);
+  background-repeat:repeat-y;
+  background-position: center;
+  background-size:contain;
+  color: black;
+}
+
+.search-container {
+  margin-bottom: 0.5%;
+  margin-top: 3.5%;
+}
+
+#search-input {
+  width: 80%;
+  padding: 0.5%;
+  font-size: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-left: 10%;
+  margin-right: 9%;
+  padding-top: 0.5%;
+  margin-bottom: 0.5%
+}
+
+.botones {
+  
+  margin-top: 1%;
+  margin-left: 10%;
+
+}
+
+/* Estilo para los botones */
+.filtro-btn {
+    background-color: #f7ab07b9;
+    border: none;
+    color: rgb(255, 255, 255); 
+    padding:0% 1%; 
+    text-align: center;
+    text-decoration: dotted;
+    display: inline-block;
+    font-size: 150%;
+    margin-left: 1%;
+    margin-top: 1%;
+    cursor: pointer;
+    border-radius: 12px; 
+}
+
+/* Estilo para los botones cuando pasas el cursor sobre ellos */
+.filtro-btn:hover {
+    background-color: #f7bf075e; /* Color de fondo más oscuro al pasar el cursor */
+}
+
+
+h1 {
+  color: rgb(230, 171, 22); 
+  text-align: center; 
+  font-size: 300%; 
+  margin-top: 0%; 
+  margin-bottom: 1%; 
+}
+
+ul{
+  list-style: none;
+  margin-left: 10%;
+  margin-right: 9%;
+}
+
+li{
+  display: flow-root;
+  order: var(vehiculos);
+  padding-top: 6%;
+}
+.vehiculos{
+height: 75%;
+width: 75%;
+margin-left: 12.7%;
+}
+table {
+  width: 80%; /* Ampliando el ancho de la tabla */
+  margin: 0 auto; /* Centrando la tabla */
+  border-collapse: collapse;
+  padding: 3%;
+}
+th, td {
+  border: 1px solid black;
+  padding: 2%;
+  text-align: center;
+  text-size-adjust: auto;
+}
+tbody tr:nth-child(odd) {
+  background-color: #f7bf07; /* Cambiando el color de fondo de las filas impares */
+}
+tbody tr:nth-child(even) {
+  background-color: #696169ea; /* Cambiando el color de fondo de las filas pares */
+}
+
+footer {
+  background-color: rgba(0, 0, 0, 0.5); 
+  backdrop-filter: blur(10px); 
+  color: white;
+  padding: 2%;
+  text-align: center;
+  margin-top: 40%;
+}
+
+.footer-content {
+  max-width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-section {
+  width: 47%;
+  margin: 0.5%;
+}
+
+.footer-section p {
+  margin: 1%;
+}
+
+.footer-section a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-bottom {
+  margin-top: 1%;
+}
+
+.footer-bottom p {
+  margin: 0;
+}

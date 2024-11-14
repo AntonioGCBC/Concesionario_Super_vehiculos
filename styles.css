@@ -1,0 +1,129 @@
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background:url("Fotos/fondoreserva.jpg");
+    background-position: auto;
+    background-size: auto;
+    color: azure;
+}
+
+.background {
+    width: 40%;
+    height: 60%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+}
+
+.background .shape {
+    height: 30%;
+    width: 30%;
+    position: absolute;
+    border-radius: 50%;
+}
+
+form {
+    height: 60%; 
+    width: 40%; 
+    background-color: rgba(255, 255, 255, 0.13);
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+    padding: 0.5% 3.5%; 
+    box-sizing: border-box; 
+}
+
+form * {
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    outline: none;
+    border: none;
+}
+
+form h3 {
+    font-size: 2em; 
+    font-weight: 500;
+    line-height: 1.2em;
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-top: 2%;
+    font-size: 1em;
+    font-weight: 500;
+}
+
+input {
+    display: block;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.07);
+    border-radius: 3px;
+    padding:  10px;
+    margin-top: 2%;
+    font-size: 1em;
+    font-weight: 300;
+}
+
+::placeholder {
+    color: #e5e5e581;
+}
+
+button {
+    margin-top: 7%;
+    width: 100%;
+    background-color: #ffffff;
+    color: #080710;
+    padding: 3%;
+    font-size: 1em;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.5); 
+    backdrop-filter: blur(10px); 
+    color: white;
+    padding: 2%;
+    text-align: center;
+    margin-top: 40%;
+}
+
+.footer-content {
+    max-width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    width: 47%;
+    margin: 0.5%;
+}
+
+.footer-section p {
+    margin: 1%;
+}
+
+.footer-section a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-bottom {
+    margin-top: 1%;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
